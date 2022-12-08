@@ -144,8 +144,6 @@ if __name__ == '__main__':
 
 
 
-
-    print(folder_names)
     verify_tensor = verify_tensor.cuda()
     verify_label = verify_label.cuda()
     model_outputs_dict = {}
@@ -159,7 +157,7 @@ if __name__ == '__main__':
         models_list = []
         model_path = os.path.join(file_path, folder)
         for model_file_name in os.listdir(model_path):
-            print(model_file_name)
+
             net = getattr(models, model_type)(num_classes=num_classes)
             if args.case in ['gauss', 'color', 'gauss_color']:
                 net_dicts = torch.load(os.path.join(model_path, model_file_name) , map_location='cpu')
@@ -185,8 +183,6 @@ if __name__ == '__main__':
             for model in models_list:
                 model.cuda()
                 model_predicts.append(model(verify_tensor).softmax(dim=1))
-                print((verify_label == model_predicts[-1].argmax(dim=1)).sum())
-                del model
                 torch.cuda.empty_cache()
             model_outputs_dict[inter_propor] = torch.stack(model_predicts).detach().cpu()
     
