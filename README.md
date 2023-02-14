@@ -1,6 +1,6 @@
 # $\text{RAI}^2$ : Responsible Identity Audit Governing the Artificial Intelligence
 
-This repository contains code for reproducing the results of our NDSS'23 paper "$\text{RAI}^2$ : Responsible Identity Audit Governing the Artificial Intelligence"
+This repository contains code for reproducing the results of our NDSS'23 paper "RAI2 : Responsible Identity Audit Governing the Artificial Intelligence"
 (based on the popular Pytorch [implementation](https://github.com/kuangliu/pytorch-cifar)). The code contains scripts to train the models and Jupyter notebooks to generate tables and figures.
 
 Remember to cite if you find our repo useful :)
