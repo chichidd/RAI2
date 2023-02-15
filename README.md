@@ -48,7 +48,7 @@ First, please modify variables in format of `{}_PATH` in `conf/global_settings.p
 
 For CIFAR-10/100 and Tiny-ImageNet, check `DatasetSimilarity.ipynb` to obtain intersected datasets. The files should be in format of `{dataset}_intersect_{similarity}.pkl` (e.g. CIFAR10_intersect_0.7, CIFAR10_intersect_0.8).
 
-For facial data, you can download [FairFace](https://github.com/dchen236/FairFace) and [UTKFace](https://susanqq.github.io/UTKFace/) or directly use our pre-processed dataset in format of .pkl.
+For facial data, you can download [FairFace](https://github.com/dchen236/FairFace) and [UTKFace](https://susanqq.github.io/UTKFace/) or directly use our pre-processed [dataset](https://drive.google.com/file/d/1kf13W76Yg53zSolhQ60nhilsEJguTh97/view?usp=sharing) in format of .pkl (list of raw data and labels).
 
 Then, run `ProcessFacialAttribute.ipynb` to obtain .pkl files.
 *Note:* The step is to accelerate data loading during training. It is ok to integrate this part into training scripts.
